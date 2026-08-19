@@ -1,6 +1,14 @@
-@MiniShop.Api_HostAddress = http://localhost:5112
+@MiniShop= http://localhost:5112
 
-GET {{MiniShop.Api_HostAddress}}/weatherforecast/
+GET {{MiniShop}}/products/
 Accept: application/json
 
+###
+POST {{MiniShop}}/products
+Content-Type: application/json
+
+{
+  "name": "Logiciel Postgres",
+  "price": 29.99
+}
 ###
