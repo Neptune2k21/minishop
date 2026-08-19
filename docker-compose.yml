@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: minishop-postgres
+    environment:
+      POSTGRES_USER: minishop
+      POSTGRES_PASSWORD: minishop
+      POSTGRES_DB: minishop
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
